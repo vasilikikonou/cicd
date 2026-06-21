@@ -24,6 +24,5 @@ jobs:
       - name: Run Tests
         run: go test ./... -cover
 
-
       - name: Check Formatting
         run: test -z "$(go fmt ./...)"
