@@ -9,6 +9,10 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
 
+  style:
+    name: Style
+    runs-on: ubuntu-latest
+
     steps:
       - name: Check out code
         uses: actions/checkout@v6
@@ -23,7 +27,6 @@ jobs:
 
       - name: Run Tests
         run: go test ./... -cover
-
 
       - name: Check Formatting
         run: test -z "$(go fmt ./...)"
